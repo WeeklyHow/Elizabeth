@@ -1,0 +1,57 @@
+<!-- STEP 1: CREATE THE HAMBURGER MENU BUTTON -->
+<div class="-mr-2 -my-2 ml-3 md:hidden">
+    <button type="button" class="bg-white p-2 inline-flex items-center justify-center focus:outline-none">
+        INSERT ICON HERE
+    </button>
+</div>
+
+<!-- STEP 2: CREATE THE ALPINEJS VARIABLE FOR THE MOBILE MENU OPEN/CLOSE -->
+x-data="{ mobileMenuOpen: false }"
+
+<!-- STEP 3: USE THIS MOBILE MENU TEMPLATE -->
+
+<!-- MOBILE MENU CONTAINER -->
+<div class="absolute z-10 top-0 inset-x-0 p-2 transform origin-top-left md:hidden">
+    <div class="shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 bg-white w-full">
+        <div class="p-5 divide-y-2 divide-gray-50">
+
+            <!-- MOBILE MENU HEADER TITLE PLUS CLOSE BUTTON -->
+            <div class="flex items-center justify-between pb-3">
+                <div>
+                    <h1 class="text-lg text-gray-500">MENU</h1>
+                </div>
+                <div class="-mr-2">
+                    <button type="button" class="bg-white rounded-md p-2 text-gray-500">
+                        CLOSE
+                    </button>
+                </div>
+            </div>
+
+            <!-- NAVIGATION LINKS FOR MOBILE MENU -->
+            <div class="pt-3">
+                <nav class="grid gap-y-7">
+
+                    <a href="#" class="-m-3 p-3 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                        LINK ITEM
+                    </a>
+
+                    <a href="#" class="-m-3 p-3 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                        LINK ITEM
+                    </a>
+
+                    <div class="relative">
+                        <button type="button" class="text-base text-gray-500 hover:text-gray-900 flex items-center justify-between w-full">
+                            <div>LINK ITEM</div>
+                        </button>
+
+                        <div class="grid gap-y-7 py-3">
+                            <a href="#" class="-m-3 p-3 mt-2 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-gray-500">CHILDLINK ITEM</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
